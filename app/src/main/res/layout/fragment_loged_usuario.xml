@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuarios.logedUsuario.LogedUsuarioFragment">
+
+    <RelativeLayout
+        android:id="@+id/fragment_loged_usuario_relative_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/grey"
+        android:layout_centerHorizontal ="true">
+
+        <ImageView
+            android:id="@+id/fragment_loged_usuario_imageView_Icon"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_user"/>
+
+    <TextView
+        android:id="@+id/fragment_loged_usuario_textView_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fragment_loged_usuario_imageView_Icon"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="nombre"
+        android:textSize="50dp"
+        style="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/fragment_loged_usuario_textView_apellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="apellidos"
+        android:textSize="50dp"
+        android:layout_below="@id/fragment_loged_usuario_textView_nombre"
+        android:layout_toRightOf="@id/fragment_loged_usuario_imageView_Icon"
+        android:layout_marginLeft="20dp"
+        style="?android:attr/textAppearanceLarge"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_loged_usuario_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_loged_usuario_relative_nombre">
+
+        <TextView
+            android:id="@+id/fragment_loged_usuario_textView_compras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_shopping"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/ic_ticket"
+            android:drawablePadding="10dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/fragment_loged_usuario_view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd5d5d5"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/fragment_loged_usuario_textView_compras"/>
+
+        <TextView
+            android:id="@+id/fragment_loged_usuario_textView_tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_loged_usuario_view_line"
+            android:layout_marginTop="10dp"
+            android:text="@string/my_cards"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/ic_credit_card"
+            android:drawablePadding="10dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/fragment_loged_usuario_view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd5d5d5"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/fragment_loged_usuario_textView_tarjeta"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/fragment_loged_usuario_button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".peliculas.fdPelicula.FdPeliculaActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/activity_fd_pelicula_youtube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:videoId=""
+        app:autoPlay="true"
+        app:showYouTubeButton="true"/>
+
+    <TextView
+        android:id="@+id/activity_fd_pelicula_textView_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_fd_pelicula_youtube"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/activity_fd_pelicula_bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_fd_pelicula_textView_titulo"
+        app:menu="@menu/menu_nav_fd_pelicula"
+        app:itemBackground="@drawable/drawable_selector"
+        app:itemTextColor="@color/bottom_nav_2_color"
+        app:itemIconTint="@color/bottom_nav_2_color"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/activity_fd_pelicula_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_fd_pelicula_bottomNavigationView"
+        android:orientation="vertical"/>
+
+</RelativeLayout>

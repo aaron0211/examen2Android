@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_nav_1"
+        android:enabled="true"
+        android:title="@string/schedule"/>
+    <item
+        android:id="@+id/menu_nav_2"
+        android:enabled="true"
+        android:title="@string/synopsis"/>
+</menu>

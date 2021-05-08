@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".usuarios.loginUsuario.LoginUsuarioFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_login_usuario_textinputlayout_email"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_login_usuario_textinput_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_login_usuario_textinputlayout_password"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/fragment_login_usuario_textinputlayout_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_login_usuario_textinput_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/fragment_login_usuario_button_login"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:layout_below="@id/fragment_login_usuario_textinputlayout_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+
+        <Button
+            android:id="@+id/fragment_login_usuario_button_add"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="@string/sign_up"
+            android:layout_below="@id/fragment_login_usuario_button_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/fragment_login_usuario_progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

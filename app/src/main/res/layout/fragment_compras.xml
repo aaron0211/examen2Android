@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuarios.comprasUsuario.ComprasFragment">
+
+    <LinearLayout
+        android:id="@+id/fragment_compras_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/design_default_color_primary">
+
+        <TextView
+            android:id="@+id/fragment_compras_textView_compras"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/my_shopping"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/ic_ticket_40"
+            android:drawablePadding="10dp"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_compras_view_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ffd5d5d5"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_compras_layout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_compras_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_compras_view_line"/>
+</RelativeLayout>

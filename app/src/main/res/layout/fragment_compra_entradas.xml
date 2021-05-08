@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".entradas.compraEntradas.CompraEntradasFragment">
+
+
+    <LinearLayout
+        android:id="@+id/fragment_compra_entradas_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/design_default_color_primary">
+
+        <TextView
+            android:id="@+id/fragment_compra_entradas_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/payment_methods"
+            android:textSize="35dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_compra_entradas_textView_paypal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/paypal"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_paypal"
+        android:drawablePadding="10dp"
+        android:clickable="true"
+        android:layout_below="@id/fragment_compra_entradas_layout"/>
+
+    <View
+        android:id="@+id/fragment_compra_entradas_view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd5d5d5"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_compra_entradas_textView_paypal"/>
+
+    <TextView
+        android:id="@+id/fragment_compra_entradas_textView_tarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_compra_entradas_view_line"
+        android:layout_marginTop="10dp"
+        android:text="@string/credit_card"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_credit_card"
+        android:drawablePadding="10dp"
+        android:clickable="true"/>
+
+    <View
+        android:id="@+id/fragment_compra_entradas_view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd5d5d5"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_compra_entradas_textView_tarjeta"/>
+
+    <TextView
+        android:id="@+id/fragment_compra_entradas_textView_bizum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_compra_entradas_view_line2"
+        android:layout_marginTop="10dp"
+        android:text="@string/bizum"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_bizum"
+        android:drawablePadding="10dp"
+        android:clickable="true"/>
+
+    <View
+        android:id="@+id/fragment_compra_entradas_view_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd5d5d5"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_compra_entradas_textView_bizum"/>
+
+
+    <TextView
+        android:id="@+id/fragment_compra_entradas_textView_reserva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_compra_entradas_view_line3"
+        android:layout_marginTop="10dp"
+        android:text="@string/reserve"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_reserved"
+        android:drawablePadding="10dp"
+        android:clickable="true"/>
+
+    <View
+        android:id="@+id/fragment_compra_entradas_view_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd5d5d5"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_compra_entradas_textView_reserva"/>
+
+</RelativeLayout>

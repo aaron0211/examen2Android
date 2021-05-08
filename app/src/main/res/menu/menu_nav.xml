@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_nav_1"
+        android:icon="@drawable/ic_movies"
+        android:enabled="true"
+        android:title="@string/movies"/>
+    <item
+        android:id="@+id/menu_nav_2"
+        android:enabled="true"
+        android:icon="@drawable/ic_top10"
+        android:title="@string/top_10"/>
+    <item
+        android:id="@+id/menu_nav_3"
+        android:icon="@drawable/ic_search_24"
+        android:enabled="true"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/menu_nav_4"
+        android:icon="@drawable/ic_cine"
+        android:enabled="true"
+        android:title="@string/cine"/>
+    <item
+        android:id="@+id/menu_nav_5"
+        android:icon="@drawable/ic_user"
+        android:enabled="true"
+        android:title="@string/user"/>
+</menu>

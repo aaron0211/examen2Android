@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".entradas.ButacasFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/design_default_color_primary"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fragment_butacas_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/fragment_butacas_im"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_user"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/fragment_butacas_tv_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/fragment_butacas_im" />
+
+            <TextView
+                android:id="@+id/fragment_butacas_tv_cine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cine"
+                android:textSize="20dp"
+                android:layout_alignLeft="@id/fragment_butacas_tv_titulo"
+                android:layout_below="@id/fragment_butacas_tv_titulo"/>
+
+            <TextView
+                android:id="@+id/fragment_butacas_tv_fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textSize="20dp"
+                android:layout_alignLeft="@id/fragment_butacas_tv_titulo"
+                android:layout_below="@id/fragment_butacas_tv_cine"/>
+
+            <TextView
+                android:id="@+id/fragment_butacas_tv_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hour"
+                android:textSize="20dp"
+                android:layout_alignLeft="@id/fragment_butacas_tv_titulo"
+                android:layout_below="@id/fragment_butacas_tv_fecha"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/fragment_butacas_view_line"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#ffd5d5d5"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/fragment_butacas_cardView"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/screen"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@id/fragment_butacas_cardView"
+        android:layout_marginTop="30dp"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/fragment_butacas_cardView"
+        android:layout_toLeftOf="@id/fragment_butacas_chekbox_2"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fragment_butacas_chekbox_1"
+        android:layout_toLeftOf="@id/fragment_butacas_chekbox_3"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fragment_butacas_chekbox_1"
+        android:layout_toLeftOf="@id/fragment_butacas_chekbox_4"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fragment_butacas_chekbox_1"
+        android:layout_centerHorizontal="true"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fragment_butacas_chekbox_1"
+        android:layout_toRightOf="@id/fragment_butacas_chekbox_4"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fragment_butacas_chekbox_1"
+        android:layout_toRightOf="@id/fragment_butacas_chekbox_5"/>
+
+    <CheckBox
+        android:id="@+id/fragment_butacas_chekbox_7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/fragment_butacas_chekbox_1"
+        android:layout_toRightOf="@id/fragment_butacas_chekbox_6"/>
+
+    <Button
+        android:id="@+id/fragment_butacas_button_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continuar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

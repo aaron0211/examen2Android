@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".peliculas.buscarPeliculas.BuscarPeliculasFragment">
+
+    <LinearLayout
+        android:id="@+id/fragment_buscar_peliculas_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="RtlSymmetry"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_text_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/gener"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_buscar_peliculas_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:layout_below="@id/fragment_buscar_peliculas_linearLayout"
+        android:layout_above="@id/fragment_buscar_peliculas_linearLayout_buscar"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_buscar_peliculas_linearLayout_buscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fragment_buscar_peliculas_textInput_Buscar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/fragment_buscar_peliculas_button_buscar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/search"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/fragment_buscar_peliculas_progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_buscar_peliculas_linearLayout_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_buscar_peliculas_tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/fragment_buscar_peliculas_button_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/retry"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

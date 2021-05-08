@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".entradas.EntradasFragment">
+
+    <LinearLayout
+        android:id="@+id/fragment_entradas_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/design_default_color_primary">
+
+        <TextView
+            android:id="@+id/fragment_entradas_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/select_your_tickects"
+            android:textSize="35dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tvNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/normal"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_layout"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_13"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_tvNormal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_joven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/universitary"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_tv_13"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_65"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_tv_joven"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tvNormal_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_cant"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_layout"
+        android:layout_toRightOf="@id/fragment_entradas_tvNormal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_13_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_cant"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_tvNormal_cantidad"
+        android:layout_toRightOf="@id/fragment_entradas_tv_13"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@id/fragment_entradas_tvNormal_cantidad"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_65_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_cant"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_tv_joven_cantidad"
+        android:layout_toRightOf="@id/fragment_entradas_tv_joven"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@id/fragment_entradas_tvNormal_cantidad"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_joven_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_cant"
+        android:textSize="@dimen/default_textSize"
+        android:layout_below="@id/fragment_entradas_tv_13_cantidad"
+        android:layout_toRightOf="@id/fragment_entradas_tv_13"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@id/fragment_entradas_tvNormal_cantidad"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total"
+        android:textSize="@dimen/default_textSize"
+        android:layout_above="@id/fragment_entradas_button_pagar"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/fragment_entradas_tv_total_pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_cant"
+        android:textSize="@dimen/default_textSize"
+        android:layout_alignBottom="@id/fragment_entradas_tv_total"
+        android:layout_alignLeft="@id/fragment_entradas_tvNormal_cantidad"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_menos_normal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_toLeftOf="@id/fragment_entradas_button_mas_normal"
+        android:layout_alignBottom="@id/fragment_entradas_tvNormal_cantidad"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_mas_normal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_alignBottom="@id/fragment_entradas_tvNormal_cantidad"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"/>
+
+
+    <Button
+        android:id="@+id/fragment_entradas_button_menos_13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_toLeftOf="@id/fragment_entradas_button_mas_normal"
+        android:layout_alignBottom="@id/fragment_entradas_tv_13_cantidad"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_mas_13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_alignBottom="@id/fragment_entradas_tv_13_cantidad"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_menos_joven"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_toLeftOf="@id/fragment_entradas_button_mas_normal"
+        android:layout_alignBottom="@id/fragment_entradas_tv_joven_cantidad"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_mas_joven"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_alignBottom="@id/fragment_entradas_tv_joven_cantidad"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"/>
+
+
+    <Button
+        android:id="@+id/fragment_entradas_button_menos_65"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_toLeftOf="@id/fragment_entradas_button_mas_normal"
+        android:layout_alignBottom="@id/fragment_entradas_tv_65_cantidad"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_mas_65"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textSize="@dimen/default_textSize"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_alignBottom="@id/fragment_entradas_tv_65_cantidad"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/fragment_entradas_button_pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_seat"
+        android:textSize="@dimen/default_textSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
