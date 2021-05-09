@@ -68,8 +68,27 @@ public class AddUsuarioFragment extends Fragment implements AddUsuarioContract.V
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nombre= etNombre.getText().toString();
+                String apellidos = etApellidos.getText().toString();
+                String email = etEmail.getText().toString();
                 String pass1 = etPass.getText().toString();
                 String pass2 = etPass2.getText().toString();
+                if (nombre.isEmpty()){
+                    etNombre.setError("Campo obligatorio");
+                    return;
+                }
+                if (apellidos.isEmpty()){
+                    etApellidos.setError("Campo obligatorio");
+                    return;
+                }
+                if (email.isEmpty()){
+                    etEmail.setError("Campo obligatorio");
+                    return;
+                }
+                if (pass1.isEmpty()){
+                    etPass.setError("Campo obligatorio");
+                    return;
+                }
                 if (pass1.equals(pass2)){
                     Usuario usuario = new Usuario();
                     usuario.setNombre(String.valueOf(etNombre.getText()));
