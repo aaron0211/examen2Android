@@ -15,6 +15,7 @@ import android.widget.ProgressBar;
 
 import com.example.examen2.R;
 import com.example.examen2.beans.Usuario;
+import com.example.examen2.usuarios.addUsuario.AddUsuarioFragment;
 import com.example.examen2.usuarios.logedUsuario.LogedUsuarioFragment;
 
 /**
@@ -90,7 +91,9 @@ public class LoginUsuarioFragment extends Fragment implements LoginUsuarioContra
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                AddUsuarioFragment fragment = AddUsuarioFragment.newInstance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
             }
         });
     }

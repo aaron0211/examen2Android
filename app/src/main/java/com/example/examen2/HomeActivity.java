@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 
+import com.example.examen2.cine.lstCines.LstCinesFragment;
 import com.example.examen2.peliculas.buscarPeliculas.BuscarPeliculasFragment;
 import com.example.examen2.peliculas.lstPeliculas.LstPeliculasFragment;
 import com.example.examen2.peliculas.lstPeliculasTOP.LstPeliculasTopFragment;
@@ -30,8 +32,13 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.activity_home_BottomNavigation);
 
+        if (getIntent().getStringExtra("Login") == null){
+            showFragmentHome();
+        }else {
+            showFragmentUser();
+        }
+
         initBottomNavigation();
-        showFragmentHome();
     }
 
     private void initBottomNavigation(){
@@ -49,6 +56,7 @@ public class HomeActivity extends AppCompatActivity {
                         showFragmentBuscar();
                         return true;
                     case R.id.menu_nav_4:
+                        showFragmentCine();
                         return true;
                     case R.id.menu_nav_5:
                         showFragmentUser();
@@ -76,6 +84,12 @@ public class HomeActivity extends AppCompatActivity {
     private void showFragmentBuscar(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         BuscarPeliculasFragment fragment = BuscarPeliculasFragment.newInstance();
+        transaction.replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
+    }
+
+    private void showFragmentCine(){
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        LstCinesFragment fragment = LstCinesFragment.newInstance();
         transaction.replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
     }
 

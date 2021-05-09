@@ -27,7 +27,8 @@
             android:layout_height="50dp"
             android:layout_below="@id/row_pelicula_ivImg"
             android:numStars="5"
-            android:rating="3"
+            android:stepSize="0.1"
+            android:rating="2.5"
             android:layout_centerHorizontal="true"
             style="@style/Widget.AppCompat.RatingBar.Indicator"/>
         </RelativeLayout>

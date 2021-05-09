@@ -29,6 +29,9 @@ public interface ApiService {
     @GET("generos")
     Call<ArrayList<Genero>> getGeneros();
 
+    @GET("cines")
+    Call<ArrayList<Cine>> getCines();
+
     @GET("peliculas/top10")
     Call<ArrayList<Pelicula>> getTop10();
 
@@ -44,7 +47,7 @@ public interface ApiService {
     @GET("usuario")
     Call<Usuario> getUsuarioLogin(@Query("email")String email, @Query("password")String password);
 
-    @GET("compras")
+    @GET("compras/id")
     Call<ArrayList<Compra>> getCompraUsuario(@Query("id")int id_usuario);
 
     @GET("sesiones/pelicula")
@@ -52,4 +55,7 @@ public interface ApiService {
 
     @POST("compra")
     Call<Compra> comprarEntradas(@Body ArrayList<EntradaDTO> json);
+
+    @POST("usuario")
+    Call<Usuario> postUsuario(@Body Usuario usuario);
 }

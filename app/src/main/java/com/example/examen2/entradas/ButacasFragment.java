@@ -19,6 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.examen2.HomeActivity;
 import com.example.examen2.R;
 import com.example.examen2.beans.Butaca;
 import com.example.examen2.beans.Entrada;
@@ -125,9 +126,12 @@ public class ButacasFragment extends Fragment {
                 registrado = sharedPreferences.getBoolean("Registrado",false);
 
                 if (!registrado) {
-                    LoginUsuarioFragment fragment = LoginUsuarioFragment.newInstance();
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.activity_home_layout, fragment).addToBackStack(null).commit();
+                    Intent intent1 = new Intent(getContext(), HomeActivity.class);
+                    intent1.putExtra("Login","Ir a login");
+                    getActivity().startActivity(intent1);
+//                    LoginUsuarioFragment fragment = LoginUsuarioFragment.newInstance();
+//                    getActivity().getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.activity_home_layout, fragment).addToBackStack(null).commit();
                 }else {
 
                     for (int i=0;i<mTotal;i++){

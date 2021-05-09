@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Examen2</string>
+    <string name="movies">Películas</string>
+    <string name="user">Usuario</string>
+    <string name="cine">Cine</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="login">ENTRAR</string>
+    <string name="sign_up">REGISTRATE</string>
+    <string name="my_shopping">Mis compras</string>
+    <string name="my_cards">Mis tarjetas</string>
+    <string name="log_out">SALIR</string>
+    <string name="schedule">Horario</string>
+    <string name="synopsis">Sinopsis</string>
+    <string name="select_your_tickects">Selecciona tus entradas</string>
+    <string name="normal">Normal 7,70€</string>
+    <string name="_13">-13 años 5€</string>
+    <string name="universitary">Universitario 5.90€</string>
+    <string name="_65">+65 años 3.50€</string>
+    <string name="default_cant">0</string>
+    <string name="pay">Pagar</string>
+    <string name="total">Total</string>
+    <string name="screen">Pantalla</string>
+    <string name="select_seat">Selección butacas</string>
+    <string name="title">Titulo</string>
+    <string name="date">Fecha</string>
+    <string name="hour">Hora</string>
+    <string name="continuar">Continuar</string>
+    <string name="payment_methods">Métodos de pago</string>
+    <string name="credit_card">Tarjeta de crédito</string>
+    <string name="paypal">PayPal</string>
+    <string name="bizum">Bizum</string>
+    <string name="reserve">Reserva</string>
+    <string name="retry">Reintentar</string>
+    <string name="top_10">TOP 10</string>
+    <string name="search">Buscar</string>
+    <string name="gener">Género</string>
+    <string name="detail">Detalle de compra</string>
+    <string name="name">CineAragón</string>
+    <string name="add_user">Añadir usuario</string>
+    <string name="nameUser">Nombre</string>
+    <string name="surname">Apeliidos</string>
+    <string name="repeat_password">Repetir Contraseña</string>
+    <string name="add">Añadir</string>
+</resources>
