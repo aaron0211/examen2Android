@@ -70,12 +70,14 @@ public class FdPeliculaActivity extends AppCompatActivity {
 
     private void showFragment(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
         Cine_Sesion_Fragment fragment = Cine_Sesion_Fragment.newInstance(pelicula.getId_pelicula());
         transaction.replace(R.id.activity_fd_pelicula_layout,fragment).commit();
     }
 
     private void showFragmentSinopsis(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
         SinopsisFragment fragment = SinopsisFragment.newInstance(pelicula.getSinopsis(),pelicula.getFecha_estreno());
         transaction.replace(R.id.activity_fd_pelicula_layout,fragment).commit();
     }

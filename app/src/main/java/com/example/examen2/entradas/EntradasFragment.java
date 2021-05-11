@@ -179,6 +179,7 @@ public class EntradasFragment extends Fragment {
                                             Integer.valueOf(tv13.getText().toString()),Integer.valueOf(tvJoven.getText().toString()),
                                             Integer.valueOf(tv65.getText().toString()));
                 getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit)
                         .replace(R.id.activity_entradas_layout,fragment).addToBackStack(null).commit();
             }
         });

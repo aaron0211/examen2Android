@@ -129,9 +129,6 @@ public class ButacasFragment extends Fragment {
                     Intent intent1 = new Intent(getContext(), HomeActivity.class);
                     intent1.putExtra("Login","Ir a login");
                     getActivity().startActivity(intent1);
-//                    LoginUsuarioFragment fragment = LoginUsuarioFragment.newInstance();
-//                    getActivity().getSupportFragmentManager().beginTransaction()
-//                            .replace(R.id.activity_home_layout, fragment).addToBackStack(null).commit();
                 }else {
 
                     for (int i=0;i<mTotal;i++){
@@ -177,6 +174,7 @@ public class ButacasFragment extends Fragment {
 
                     CompraEntradasFragment fragment = CompraEntradasFragment.newInstance();
                     getActivity().getSupportFragmentManager().beginTransaction()
+                            .setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit)
                             .replace(R.id.activity_entradas_layout,fragment).addToBackStack(null).commit();
                 }
             }
