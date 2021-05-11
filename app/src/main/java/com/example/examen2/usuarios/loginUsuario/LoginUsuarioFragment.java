@@ -93,6 +93,7 @@ public class LoginUsuarioFragment extends Fragment implements LoginUsuarioContra
             public void onClick(View v) {
                 AddUsuarioFragment fragment = AddUsuarioFragment.newInstance();
                 getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit)
                         .replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
             }
         });
