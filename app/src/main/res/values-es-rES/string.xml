@@ -43,4 +43,5 @@
     <string name="surname">Apeliidos</string>
     <string name="repeat_password">Repetir Contraseña</string>
     <string name="add">Añadir</string>
+    <string name="fail_detail">La compra se hizo desde otro dispositivo</string>
 </resources>

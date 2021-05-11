@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.examen2.R;
 import com.example.examen2.roomDB.ComprasRoom;
@@ -36,14 +38,26 @@ public class DetalleCompraActivity extends AppCompatActivity {
 
         database = RoomDB.getInstance(getApplicationContext());
 
-        data = database.comprasDAO().getByIdCompra(mId);
+        if(database.comprasDAO().getByIdCompra(mId) ==  null){
+            Toast.makeText(getApplicationContext(), R.string.fail_detail,Toast.LENGTH_LONG).show();
+            finish();
+        }else {
+            data = database.comprasDAO().getByIdCompra(mId);
 
-        titulo.setText(data.getPelicula());
-        cine.setText(data.getCine());
-        fecha.setText(data.getFecha());
+            titulo.setText(data.getPelicula());
+            cine.setText(data.getCine());
+            fecha.setText(data.getFecha());
 
-        Bitmap bmp = BitmapFactory.decodeByteArray(data.getImagen(),0,data.getImagen().length);
-        img.setImageBitmap(bmp);
+            Bitmap bmp = BitmapFactory.decodeByteArray(data.getImagen(),0,data.getImagen().length);
+            img.setImageBitmap(bmp);
+
+            AlphaAnimation animation = new AlphaAnimation(0.0f, 1.0f);
+            animation.setDuration(1000);
+            animation.setStartOffset(5000);
+            animation.setFillAfter(true);
+            img.startAnimation(animation);
+
+        }
     }
 
     private void initComponents(){

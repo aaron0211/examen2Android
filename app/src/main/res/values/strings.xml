@@ -42,4 +42,5 @@
     <string name="surname">Surname</string>
     <string name="repeat_password">Repeat Password</string>
     <string name="add">Add</string>
+    <string name="fail_detail">The purchase was made from another device</string>
 </resources>

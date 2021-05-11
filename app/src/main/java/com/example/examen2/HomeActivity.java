@@ -77,18 +77,21 @@ public class HomeActivity extends AppCompatActivity {
 
     private void showTop10(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
         LstPeliculasTopFragment fragment = LstPeliculasTopFragment.newInstance();
         transaction.replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
     }
 
     private void showFragmentBuscar(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
         BuscarPeliculasFragment fragment = BuscarPeliculasFragment.newInstance();
         transaction.replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
     }
 
     private void showFragmentCine(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
         LstCinesFragment fragment = LstCinesFragment.newInstance();
         transaction.replace(R.id.activity_home_layout,fragment).addToBackStack(null).commit();
     }
@@ -100,12 +103,14 @@ public class HomeActivity extends AppCompatActivity {
 
         if (!registrado) {
             FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
             LoginUsuarioFragment fragment = LoginUsuarioFragment.newInstance();
             transaction.replace(R.id.activity_home_layout, fragment);
             transaction.addToBackStack(null);
             transaction.commit();
         }else {
             FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
             LogedUsuarioFragment fragment = LogedUsuarioFragment.newInstance(sharedPreferences.getString("Nombre","aaron"),sharedPreferences.getString("Apellidos","retave"),
                                             sharedPreferences.getString("Email","aaron@aaron.com"),sharedPreferences.getString("Password","1234"),sharedPreferences.getInt("Id",1));
             transaction.replace(R.id.activity_home_layout,fragment);
