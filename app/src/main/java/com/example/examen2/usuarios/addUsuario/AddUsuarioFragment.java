@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,8 +82,13 @@ public class AddUsuarioFragment extends Fragment implements AddUsuarioContract.V
                     etApellidos.setError("Campo obligatorio");
                     return;
                 }
+
                 if (email.isEmpty()){
                     etEmail.setError("Campo obligatorio");
+                    return;
+                }
+                if (!isEmailValid(email)){
+                    etEmail.setError("Email no válido");
                     return;
                 }
                 if (pass1.isEmpty()){
@@ -117,6 +123,10 @@ public class AddUsuarioFragment extends Fragment implements AddUsuarioContract.V
         etPass = v.findViewById(R.id.fragment_add_usuario_textinput_pass);
         etPass2 = v.findViewById(R.id.fragment_add_usuario_textinput_pass2);
         btnAdd = v.findViewById(R.id.fragment_add_riders_button_add);
+    }
+
+    private boolean isEmailValid(String email){
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     @Override
