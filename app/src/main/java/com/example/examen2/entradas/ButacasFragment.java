@@ -2,6 +2,7 @@ package com.example.examen2.entradas;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.databinding.ObservableArrayList;
@@ -223,30 +224,51 @@ public class ButacasFragment extends Fragment {
         for (int i=0;i<entradas.size();i++){
             if (butaca1.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb1.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb1.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb1.setClickable(false);
             }
             if (butaca2.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb2.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb2.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb2.setClickable(false);
             }
             if (butaca3.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb3.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb3.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb3.setClickable(false);
             }
             if (butaca4.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb4.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb4.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb4.setClickable(false);
             }
             if (butaca5.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb5.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb5.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb5.setClickable(false);
             }
             if (butaca6.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb6.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb6.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb6.setClickable(false);
             }
             if (butaca7.getId_butaca() == entradas.get(i).getButaca().getId_butaca()){
                 cb7.setChecked(true);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    cb7.setButtonTintList(getContext().getColorStateList(R.color.grey));
+                }
                 cb7.setClickable(false);
             }
         }

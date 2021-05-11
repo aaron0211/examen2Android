@@ -43,4 +43,7 @@
     <string name="repeat_password">Repeat Password</string>
     <string name="add">Add</string>
     <string name="fail_detail">The purchase was made from another device</string>
+    <string name="occupied">Occupied</string>
+    <string name="free">Free</string>
+    <string name="selected">Selected</string>
 </resources>

@@ -69,9 +69,9 @@ public class HomeActivity extends AppCompatActivity {
 
     private void showFragmentHome(){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter,R.anim.exit,R.anim.pop_enter,R.anim.pop_exit);
         LstPeliculasFragment lstPeliculasFragment = LstPeliculasFragment.newInstance();
         transaction.replace(R.id.activity_home_layout,lstPeliculasFragment);
-        transaction.addToBackStack(null);
         transaction.commit();
     }
 
