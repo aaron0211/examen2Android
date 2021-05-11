@@ -111,7 +111,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/fragment_add_usuario_textinput_pass"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
@@ -132,7 +133,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/fragment_add_usuario_textinput_pass2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
