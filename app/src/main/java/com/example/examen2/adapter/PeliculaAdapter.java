@@ -47,7 +47,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
     @Override
     public void onBindViewHolder(@NonNull PeliculaViewHolder holder, int position) {
         Pelicula pelicula = lstPeliculas.get(position);
-        float estrellas = pelicula.getPuntuacion()/pelicula.getVotos();
+        float estrellas = (pelicula.getPuntuacion()/(float)pelicula.getVotos());
 
         Picasso.get().load(pelicula.getUrl()).into(holder.img);
         holder.ratingBar.setRating(estrellas);
