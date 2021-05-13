@@ -53,7 +53,7 @@ public class DetalleCompraActivity extends AppCompatActivity {
 
             AlphaAnimation animation = new AlphaAnimation(0.0f, 1.0f);
             animation.setDuration(1000);
-            animation.setStartOffset(5000);
+            animation.setStartOffset(2500);
             animation.setFillAfter(true);
             img.startAnimation(animation);
 
